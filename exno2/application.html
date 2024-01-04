@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPLICATION FORM | URK22AI1001</title>
+</head>
+
+<body>
+    <table style="width: 100%">
+        <tr>
+            <th style="text-align: center">
+                COMPANY NAME
+            </th>
+            <th style="text-align: right;">
+                <img src="karunya.png" alt="" width="100" height="100">
+            </th>
+        </tr>
+    </table>
+    <hr style="background-color:blue; height: 1px;">
+    <table style="width: 100%" cellpadding="10">
+        <tr>
+            <th style="text-align: right;">
+                <a href="home.html">MEDIA ELEMENTS</a>
+            </th>
+            <th style="text-align: left;">
+                <a href="application.html" target="_blank">Application form</a>
+            </th>
+        </tr>
+    </table>
+
+    <hr style="background-color:blue; height: 1px;">
+    <form action="submit.php" method="get">
+        <fieldset style="text-align: center;">
+
+            <legend align="center">
+                Application form
+            </legend>
+            <table style="width: 100%; text-align: center;">
+                <tr>
+                    <td>
+                        <label for="name">Name:</label>
+                        <input id="name" type="text" placeholder="Enter the Name" required>
+                    </td>      
+                </tr>
+                <tr>
+                    <td>
+                       <label for="appno">Application NO:</label>
+                       <input type="text" placeholder="URK22AIXXXX" pattern="URK22AI\d{4}" maxlength="11" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pass">Password:</label>
+                        <input type="password" placeholder="Enter your password" required maxlength="10">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="age">Age:</label>
+                        <input type="text" min="19" max="24" maxlength="3" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gender:
+                        <label for="gen1">Male</label>
+                        <input type="radio" name="gender" id="gen1">
+                        <label for="gen2">Female</label>
+                        <input type="radio" name="gender" id="gen2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dob">Date of birth:</label>
+                        <input type="text" id="dob" placeholder="mm-dd-yyyy" pattern="\d{2}-\d{2}\-d{4}" maxlength="12" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="numb">Phone number:</label>
+                        <input type="text" id="numb" placeholder="+919999999999" pattern="\+\d{2}[0-9]{10}" maxlength="13" required >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="mailid">Email:</label>
+                        <input type="text" id="mailid" placeholder="xxxxxxxxxxx.karunya.edu.in" pattern="[a-zA-Z0-9._%+-]+@karunya\.edu\.in" required> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="address">Address:</label>
+                        <textarea type="text" id="address" rows="4" cols="25"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="zip">Zipcode:</label>
+                        <input type="text" name="zipcode" id="zip" placeholder="999999" maxlength="6" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Language Known:
+                        <label for="check1">English</label>
+                        <input type="checkbox" name="chg" id="check1">
+                        <label for="check2">Tamil</label>
+                        <input type="checkbox" name="chg" id="check2">
+                        <label for="check3">Malayalam</label>
+                        <input type="checkbox" name="chg" id="check3">
+                        <label for="check4">Telugu</label>
+                        <input type="checkbox" name="chg" id="check4">
+                        <label for="check5">Hindi</label>
+                        <input type="checkbox" name="chg" id="check5">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dd">select your Courses:</label>
+                        <select name="Courses" id="dd">
+                            <option value="B.Tech Computer secience and engineering">B.Tech Computer secience and engineering</option>
+                            <option value="B.Tech Artificial Intelligence and datascience">B.Tech Artificial Intelligence and datascience</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="file">Upload file:</label>
+                        <input type="file" accept=".pdf, .docx, .doc">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+
+            </table>   
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
