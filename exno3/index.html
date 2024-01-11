@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXNO:3</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .headpart{
+            background-color: rgb(215, 134, 223);
+            height: 100px;
+            text-align: center;
+        }
+        img{
+            width: 100px;
+            position: absolute;/*needs to changed from fixed to absolute fixed seems like a parallex design*/
+            left: 0px;
+        }
+        .txthead{
+            font-size: 48px;
+            position: relative;
+            top: 50px;
+            /* position: fixed; */
+            text-shadow: 2px 2px grey;
+        }
+        .sec1{
+            background-size: cover;
+            background-image: url(banner.jpg);
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .txtsec1{
+            border: 2px dashed black;
+            height: 250px;
+            width: 350px;
+            background-color:rgba(230, 169, 230, 0.507);
+            text-align: justify;
+            position: relative;
+            padding:50px;
+            left: 70px;
+        }
+        .sec2 {
+            position: relative;
+            display: flex;
+            /* border: 2px solid black; */
+            justify-content: space-between;
+            background-color: violet;
+        }
+
+        .col {
+            flex: 1;
+            margin: 10px;
+            /* border: 2px solid black; */
+            position: relative;
+        }
+
+        .image{
+            position: relative;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #fff;
+        }
+
+        .txts {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            width: 100%;
+            padding: 10px;
+            border: 2px solid red;
+            text-align: center;
+        }
+        .sec3{
+            background-color: pink;
+            position: relative;
+        }
+        .sec3 h2{
+            text-align: center;
+            position: relative;
+            
+        }
+        .sec3 p{
+            height: auto;
+            text-align: justify;
+            position: relative;
+            background-color: pink;
+        }
+        .sec4 {
+            position: relative;
+            background-color: violet;
+        }
+        .sec4 .content4 img{
+            background-color: violet;
+            position: relative;
+            float: right;
+            width: 200px;
+            height: auto;
+        }
+        .sec4 h1 p{
+            background-color: violet;
+            height: auto;
+            position: relative;
+            text-align: justify;
+        }
+        .footerco{
+            position: relative;
+            padding: 70px;
+            background-color: rgb(255, 193, 86);
+            text-align: center;
+        }
+        .confoot h2{
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="headpart">
+            <img src="https://media.licdn.com/dms/image/D5603AQFMfzNzoblyrw/profile-displayphoto-shrink_800_800/0/1687755248375?e=2147483647&v=beta&t=my3CTUBnInv37h5nqmI1iWl6ZG_yiEDaUznVJVKuQMA" alt="topimg" >
+            <div class="txthead">
+                KERSTON ANTO SINGH
+            </div>
+        </div>
+        <div class="sec1">
+            <div class="txtsec1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Unde suscipit repellendus praesentium quod delectus cons
+                equuntur sit accusantium nostrum harum architecto ex exp
+                licabo asperiores ipsam expedita reiciendis blanditiis, 
+                perferendis alias obcaecati? Lorem ipsum dolor sit amet con
+                sectetur adipisicing elit. Ipsa sit quos exercitationem. Ea
+                que necessitatibus delectus in distinctio! Numquam quam nobi
+                s suscipit dolorum earum ducimus officiis provident illo min
+                us! Sit, aut?
+            </div>
+        </div>
+    </header>
+        <div class="sec2">
+            <div class="col">
+              <img class="image" src="css.png" alt="Image 1">
+              <div class="txts">CSS</div>
+            </div>
+            <div class="col">
+              <img class="image" src="JavaScript-logo.png" alt="Image 2">
+              <div class="txts">JAVA SCRIPT</div>
+            </div>
+            <div class="col">
+              <img class="image" src="pngwing.com.png" alt="Image 3">
+              <div class="txts">PREMIERE PRO</div>
+            </div>
+            <div class="col">
+              <img class="image" src="ue.jpg" alt="Image 4">
+              <div class="txts">UE5</div>
+            </div>
+          </div>
+
+          <div class="sec3">
+            <div class="contents">
+                <h2>ABOUT US</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Soluta perferendis facere rem, mollitia similique velit
+                      aperiam tempore, ad labore voluptatum expedita molestiae 
+                      neque ipsam odio error fuga temporibus libero commodi.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                      Unde suscipit repellendus praesentium quod delectus cons
+                      equuntur sit accusantium nostrum harum architecto ex exp
+                      licabo asperiores ipsam expedita reiciendis blanditiis, 
+                      perferendis alias obcaecati? Lorem ipsum dolor sit amet con
+                      sectetur adipisicing elit. Ipsa sit quos exercitationem. Ea
+                      que necessitatibus delectus in distinctio! Numquam quam nobi
+                      s suscipit dolorum earum ducimus officiis provident illo min
+                      neque ipsam odio error fuga temporibus libero commodi.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                      Unde suscipit repellendus praesentium quod delectus cons
+                      equuntur sit accusantium nostrum harum architecto ex exp
+                      licabo asperiores ipsam expedita reiciendis blanditiis, 
+                      perferendis alias obcaecati? Lorem ipsum dolor sit amet con
+                      sectetur adipisicing elit. Ipsa sit quos exercitationem. Ea
+                      que necessitatibus delectus in distinctio! Numquam quam nobi
+                      s suscipit dolorum earum ducimus officiis provident illo min </p>
+            </div>
+          </div>
+          <div class="sec4">
+            <div class="content4">
+                <h3>YOUR INTREST</h3>
+                <img src="boardmeet.jpg" alt="">
+                <p>Unde suscipit repellendus praesentium quod delectus cons
+                    equuntur sit accusantium nostrum harum architecto ex exp
+                    licabo asperiores ipsam expedita reiciendis blanditiis, 
+                    perferendis alias obcaecati? Lorem ipsum dolor sit amet con
+                    sectetur adipisicing elit. Ipsa sit quos exercitationem. Ea
+                    que necessitatibus delectus in distinctio! Numquam quam nobi
+                    s suscipit dolorum earum ducimus officiis provident illo min
+                    neque ipsam odio error fuga temporibus libero commodi.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Unde suscipit repellendus praesentium quod delectus cons
+                    equuntur sit accusantium nostrum harum architecto ex exp
+                    licabo asperiores ipsam expedita reiciendis blanditiis, 
+                    perferendis alias obcaecati? Lorem ipsum dolor sit amet con
+                    sectetur adipisicing elit. Ipsa sit quos exercitationem. Ea
+                    que necessitatibus delectus in distinctio! Numquam quam nobi
+                    s suscipit dolorum earum ducimus officiis provident illo min 
+                    licabo asperiores ipsam expedita reiciendis blanditiis, 
+                    perferendis alias obcaecati? Lorem ipsum dolor sit amet con
+                    sectetur adipisicing elit. Ipsa sit quos exercitationem. Ea
+                    que necessitatibus delectus in distinctio! Numquam quam nobi
+                    s suscipit dolorum earum ducimus officiis provident illo min</p>
+            </div>
+          </div>
+          <footer>
+            <div class="footerco">
+                <div class="confoot">
+                    <h2>ADDRESS</h2>
+                    <p>KARUNYA NAGAR</p>
+                    <p>COIMBATORE</p>
+                </div>
+            </div>
+          </footer>
+</body>
+</html>
