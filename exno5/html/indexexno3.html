@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/exno5/styles/style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Currency converter</h1>
+            <form action="#">
+                <div class="amount">
+                    <input type="number" name="user-inp" id="user-inp" placeholder="ENTER YOU AMOUNT">
+                </div>
+                <div class="selection">
+                    <div class="fromselection">
+                        <p>From</p>
+                        <div id="selectbtn">
+                            <select id="from">
+                                <option value="USD">USD</option>
+                                <option value="INR">INR</option>
+                                <option value="CAD">CAD</option>
+                                <option value="EUR">EUR</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="icon"><i class="fa fa-exchange"></i></div>
+                    <div class="toselection">
+                        <p>To</p>
+                        <div class="selectbtn">
+                            <select id="to">
+                                <option value="INR">INR</option>
+                                <option value="USD">USD</option>
+                                <option value="CAD">CAD</option>
+                                <option value="EUR">EUR</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div id="exchange">
+                   RESULT will be displayed here!!!
+                </div>
+                <button id="btn" onclick="convertCurrency()" type="button">Convert Amount</button>
+            </form>
+        </div>
+    </div>
+    <script src="/exno5/scripts/script3.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATIOR</title>
+    <link rel="stylesheet" href="../exno5/styles/style.css">
+    <script src="scripts/scripts.js"></script>
+</head>
+
+<body>
+    
+    <div class="contcard">
+        <div class="box">
+            <h1>BMI calculator</h1>
+            <form action="#" method="#">
+                <div class="content1">
+                    <div class="input">
+                        <label for="age">Age:</label>
+                        <input type="number" name="height" placeholder="Enter your age:" id="age" required>
+                    </div>
+                    <div class="input">
+                        <label for="height">Height(cm):</label>
+                        <input type="number" name="height" id="height" placeholder="Enter your height:" required>
+                    </div>
+                    <div class="input">
+                        <label for="weight">Weight(kg):</label>
+                        <input type="number" name="weight" id="weight" placeholder="Enter your Weight:" required>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div class="btn">
+                        <input id="cal" type="button" value="Calculate BMI" onclick="calculatebmi()">
+                    </div>
+                    <div class="out">
+                        <p>BMI:</p>
+                        <div class="bmi" id="bminum">0.0</div>
+                        <p>Result:</p>
+                        <div class="bmicomment" id="bmicomment">Provide Details</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

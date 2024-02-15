@@ -1,0 +1,98 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url("/exno5/asserts/exno3.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+.content{
+    color: aliceblue;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.775);
+    width: 400px;
+    text-align: center;
+    line-height: 50px;
+    padding: 20px;
+    background-color: rgba(159, 178, 195, 0.438);
+}
+
+.content h1{
+    border-bottom: 2px dashed rgba(255, 255, 255);
+    
+}
+
+input[type="number"]{
+    margin-top: 20px;
+    background-color: rgba(57, 108, 219, 0.653);
+    border: none;
+    font-size: large;
+    border: 2px solid aliceblue;
+    width: 100%;
+    border-radius: 5px;
+    color: aliceblue;
+    padding: 20px;
+    text-align: center;
+}
+
+input::placeholder{
+    color: aliceblue;
+}
+
+.selection{
+    display: flex;
+    justify-content: space-around;
+}
+
+.selection p{
+    color: aliceblue;
+    font-size: larger;
+    font-weight: bold;
+}
+
+#btn{
+    padding: 10px;
+    background-color: rgba(57, 108, 219, 0.653);
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    border-radius: 15px;
+    width: 100%;
+}
+
+#btn:hover{
+    background-color: aliceblue;
+    color: rgba(57, 108, 219);
+    transition: 1s ease-in-out;
+    border-radius: 0%;
+    border: 2px solid rgba(57, 108, 219);
+}
+
+select{
+    background-color:rgba(57, 108, 219, 0.653);
+    padding: 10px;
+    text-align: center;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+    width: 100px;
+}
+
+select:hover{
+    background-color: aliceblue;
+    color: rgba(57, 108, 219);
+    transition: 1s ease-in-out;
+    border-radius: 0%;
+    border: 2px solid rgba(57, 108, 219);
+}
