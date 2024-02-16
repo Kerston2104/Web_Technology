@@ -2,4 +2,135 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+
+}
+
+html{
+    background: url("/exno5/asserts/pizzabg.jpg");
+    height: 100vh;
+} 
+
+
+
+.chkimg .img1 img,
+.chkimg2 .img2 img,
+.chkimg3 .img3 img{
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.chkimg:active,
+.chkimg2:active,
+.chkimg3:active{
+    transform: scale(0.97);
+}
+
+.chkimg:hover,
+.chkimg2:hover,
+.chkimg3:hover{
+    scale: 0.97;
+    transition: all 0.3s ease-in-out;
+}
+
+.img1 img,
+.img2 img,
+.img3 img{
+    border: 4px solid red;
+}
+
+.chkimg input:checked ~ .img1 img,
+.chkimg2 input:checked ~ .img2 img,
+.chkimg3 input:checked ~ .img3 img{
+    border:4px solid green;
+}
+
+.chkimg input,
+.chkimg2 input,
+.chkimg3 input{
+    display: none;
+}
+
+.chkimg p,
+.chkimg2 p,
+.chkimg3 p{
+    font-size: large;
+    font-weight: bolder;
+    text-align: center;
+    color: yellow;
+}
+
+.chkimgcontainer,.chkamount{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.formscontainer{
+    text-align: center;
+    position: relative;
+}
+
+.formbg{
+    margin-top:250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(255, 166, 0, 0.541);
+    width: 400px;
+    height: 480px;
+    line-height: 30px;
+    padding: 20px;
+}
+
+input[type='number'],
+input[type='number'],
+input[type='email']{
+    background-color: rgba(255, 0, 0, 0.596);
+    color: aliceblue;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+input[type='checkbox']{
+    accent-color: red;
+}
+
+input[type='radio']{
+    accent-color: red;
+}
+
+input[type='number']::placeholder,
+input[type='number']::placeholder,
+input[type='email']::placeholder{
+    color: aliceblue;
+}
+
+input[type='submit']{
+    width: 100%;
+    padding:10px;
+    color: brown;
+    border-radius: 10px;
+    background-color: white;
+    border:1px solid white;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type='submit']:hover{
+    background-color: orange;
+    color: white;
+    border-radius: 15px;
+}
+
+.toppingcont{
+    display: flex;
+    justify-content: space-around;
+}
+
+.rdcontent{
+    display: flex;
+    justify-content: space-around;
 }

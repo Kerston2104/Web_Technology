@@ -10,15 +10,89 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="contentbox">
-            <div class="ckbox">
-                <label for="pizza"><img src="/exno5/asserts/pizza.jpg" alt=""></label>
-                <input type="checkbox" id="pizza" value="pizza">
-                <label for="vegpizza"><img src="/exno5/asserts/vegpizza.jpg" alt=""></label>
-                <input type="checkbox" id="vegpizza">
-                <label for="burger"><img src="/exno5/asserts/burger.jpg" alt=""></label>
-                <input type="checkbox" id="burger">
+    <div class="initialbg">
+
+        <div class="initial">
+            <div class="chkimgcontainer">
+                <div class="chkimg"> 
+                    <label for="pizza">
+                        <input type="checkbox" id="pizza" value="pizza">
+                        <div class="img1">
+                            <img src="/exno5/asserts/pizza.jpg" alt="">
+                            <p>RS.100</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="chkimg2">
+                    <label for="vegpizza">
+                        <input type="checkbox" id="vegpizza">
+                        <div class="img2">
+                            <img src="/exno5/asserts/vegpizza.jpg" alt="">
+                            <p>RS.100</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="chkimg3">
+                    <label for="burger">
+                        <input type="checkbox" id="burger">
+                        <div class="img3">
+                            <img src="/exno5/asserts/burger.jpg" alt="">
+                            <p>RS.500</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <!-- <div class="chkamount">
+                <p>RS.100</p>
+                <p>RS.100</p>
+                <p>RS.500</p>
+            </div> -->
+        </div>
+        <div class="formscontainer">
+            <div class="formcontent">
+                <form action="">
+                    <div class="formbg">
+                        <div class="contentform">
+                            <label for="Email">EMAIL:</label><br>
+                            <input type="email" id="Email" placeholder="Enter your email" required><br>
+                            <label for="phone">Phone</label><br>
+                            <input type="number" id="phone" placeholder="Enter your number"><br>
+                            <label for="slices">Number of slices:</label><br>
+                            <input type="number" placeholder="numberofslices" id="slices">
+                        </div>
+                        <div class="rdbutton">
+                            <p>PIZZA SIZE</p>
+                            <div class="rdcontent">
+                                <input type="radio" name="size" id="8inch">
+                                <label for="size">8-inch</label>
+                                <input type="radio" name="size" id="10inch">
+                                <label for="size">10-inch</label>
+                                <input type="radio" name="size" id="12inch">
+                                <label for="size">12-inch</label>
+                                <input type="radio" name="size" id="14inch">
+                                <label for="size">14-inch</label>
+                            </div>
+                        </div>
+                        <div class="toppingsec">
+                            <p>TOPPINGS</p>
+                            <div class="toppingcont">
+                                <input type="checkbox" id="food1" name="topping" value="Pepperoni">
+                                <label for="food1"> Pepperoni</label><br>
+                                <input type="checkbox" id="food2" name="topping" value="onion">
+                                <label for="food2"> onion</label><br>
+                                <input type="checkbox" id="food3" name="topping" value="sausage">
+                                <label for="food3"> sausage</label><br>
+                            </div>
+                        </div>
+                        <div class="conditions">
+                            <input type="checkbox" name="conditions" id="conditions" required>
+                            <label for="conditions">I agree the terms and conditions</label>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Order Now">
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
