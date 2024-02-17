@@ -7,6 +7,7 @@
     <title>Exno5</title>
     <link rel="stylesheet" href="/exno5/styles/style5.css">
     <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/113289902?v=4" type="image/x-icon">
+    <script src="/exno5/scripts/script5.js"></script>
 </head>
 
 <body>
@@ -14,9 +15,9 @@
 
         <div class="initial">
             <div class="chkimgcontainer">
-                <div class="chkimg"> 
+                <div class="chkimg">
                     <label for="pizza">
-                        <input type="checkbox" id="pizza" value="pizza">
+                        <input type="checkbox" name="imgbtn" id="pizza" value="100">
                         <div class="img1">
                             <img src="/exno5/asserts/pizza.jpg" alt="">
                             <p>RS.100</p>
@@ -25,16 +26,16 @@
                 </div>
                 <div class="chkimg2">
                     <label for="vegpizza">
-                        <input type="checkbox" id="vegpizza">
+                        <input type="checkbox" name="imgbtn" id="vegpizza" value="200">
                         <div class="img2">
                             <img src="/exno5/asserts/vegpizza.jpg" alt="">
-                            <p>RS.100</p>
+                            <p>RS.200</p>
                         </div>
                     </label>
                 </div>
                 <div class="chkimg3">
                     <label for="burger">
-                        <input type="checkbox" id="burger">
+                        <input type="checkbox" name="imgbtn" id="burger" value="500">
                         <div class="img3">
                             <img src="/exno5/asserts/burger.jpg" alt="">
                             <p>RS.500</p>
@@ -54,7 +55,7 @@
                     <div class="formbg">
                         <div class="contentform">
                             <label for="Email">EMAIL:</label><br>
-                            <input type="email" id="Email" placeholder="Enter your email" required><br>
+                            <input type="email" id="Email" placeholder="Enter your email"><br>
                             <label for="phone">Phone</label><br>
                             <input type="number" id="phone" placeholder="Enter your number"><br>
                             <label for="slices">Number of slices:</label><br>
@@ -63,34 +64,38 @@
                         <div class="rdbutton">
                             <p>PIZZA SIZE</p>
                             <div class="rdcontent">
-                                <input type="radio" name="size" id="8inch">
+                                <input type="radio" name="size" id="8inch" value="0.02">
                                 <label for="size">8-inch</label>
-                                <input type="radio" name="size" id="10inch">
+                                <input type="radio" name="size" id="10inch" value="0.04">
                                 <label for="size">10-inch</label>
-                                <input type="radio" name="size" id="12inch">
+                                <input type="radio" name="size" id="12inch" value="0.06">
                                 <label for="size">12-inch</label>
-                                <input type="radio" name="size" id="14inch">
+                                <input type="radio" name="size" id="14inch" value="0.08">
                                 <label for="size">14-inch</label>
                             </div>
                         </div>
                         <div class="toppingsec">
                             <p>TOPPINGS</p>
                             <div class="toppingcont">
-                                <input type="checkbox" id="food1" name="topping" value="Pepperoni">
+                                <input type="checkbox" id="food1" name="topping" value="0.1">
                                 <label for="food1"> Pepperoni</label><br>
-                                <input type="checkbox" id="food2" name="topping" value="onion">
-                                <label for="food2"> onion</label><br>
-                                <input type="checkbox" id="food3" name="topping" value="sausage">
-                                <label for="food3"> sausage</label><br>
+                                <input type="checkbox" id="food2" name="topping" value="0.1">
+                                <label for="food2"> Onion</label><br>
+                                <input type="checkbox" id="food3" name="topping" value="0.1">
+                                <label for="food3"> Sausage</label><br>
+                                <input type="checkbox" name="topping" id="food4" value="0.1">
+                                <label for="food4">Mushroom</label>
                             </div>
                         </div>
                         <div class="conditions">
                             <input type="checkbox" name="conditions" id="conditions" required>
-                            <label for="conditions">I agree the terms and conditions</label>
+                            <label for="conditions"><span style="color: red;">*</span> I agree the terms and
+                                conditions</label>
                         </div>
                         <div class="submit">
-                            <input type="submit" value="Order Now">
+                            <input type="submit" onclick="calculateTotalCost()" value="Order Now">
                         </div>
+                        <div id="result"></div>
                     </div>
                 </form>
             </div>

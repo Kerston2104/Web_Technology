@@ -42,7 +42,7 @@ html{
 .chkimg input:checked ~ .img1 img,
 .chkimg2 input:checked ~ .img2 img,
 .chkimg3 input:checked ~ .img3 img{
-    border:4px solid green;
+    border:7px solid green;
 }
 
 .chkimg input,
@@ -84,6 +84,19 @@ html{
     height: 480px;
     line-height: 30px;
     padding: 20px;
+}
+
+.formbg label{
+    font-weight: bold;
+}
+
+.formbg p{
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.condition span{
+    color:red;
 }
 
 input[type='number'],
