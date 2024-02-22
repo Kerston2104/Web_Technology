@@ -61,6 +61,11 @@ body {
     color: rgb(233,217,169);
 }
 
+.initial h1{
+    text-align: center;
+    color: green;
+}
+
 .chkimgcontainer,
 .chkamount {
     display: flex;
@@ -84,7 +89,7 @@ body {
     background-color:#e7dec190;
     border-radius: 15px;
     width: 400px;
-    height: 480px;
+    height: 450px;
     line-height: 30px;
     padding: 20px;
 }
