@@ -10,10 +10,10 @@
 </head>
 
 <body>
+    <div class="heading">
+        <h1 id="heading">Style Modification</h1>
+    </div>
     <div class="container">
-        <div class="heading">
-            <h1 id="heading">Style Modification</h1>
-        </div>
         <div class="flexmet">
             <div class="containerbg">
                 <div class="boxcontent">
@@ -30,25 +30,29 @@
 
                 </div>
                 <div class="formcontent">
-                        <label for="fontSize">Text Size:</label>
-                        <select id="fontSize">
-                            <option value="14px">Small</option>
-                            <option value="18px">Medium</option>
-                            <option value="24px">Large</option>
-                        </select><br>
-                        <label for="width">Width:</label>
-                        <input type="text" id="width" placeholder="Enter width"><br>
-                        <label for="height">Height:</label>
-                        <input type="text" id="height" placeholder="Enter height"><br>
-                        <input id="submitbtn" onclick="changeStyle()" type="submit" value="Apply Changes">
+                    <label for="fontSize">Text Size:</label>
+                    <select id="fontSize">
+                        <option value="14px">Small</option>
+                        <option value="18px">Medium</option>
+                        <option value="24px">Large</option>
+                    </select><br>
+                    <label for="width">Width:</label>
+                    <input type="text" id="width" placeholder="Enter width"><br>
+                    <label for="height">Height:</label>
+                    <input type="text" id="height" placeholder="Enter height"><br>
+                    <input id="submitbtn" onclick="changeStyle()" type="submit" value="Apply Changes">
                 </div>
             </div>
         </div>
     </div>
 
+    <script>
+        var heading = document.getElementById('heading');
 
-
-
+        setInterval(function () {
+            heading.style.color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        }, 2000);
+    </script>
 </body>
 
 </html>
