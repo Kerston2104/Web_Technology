@@ -27,14 +27,21 @@ function calculateTotalCost() {
     var slices = document.getElementById('slices').value;
     ogtotal *= slices;
 
+    
+
     const tipbox = prompt('Enter your tip amount (10-20% of the total cost after tax)', 0);
     const tipPercentage = parseFloat(tipbox) / 100;
 
     if (tipPercentage >= 0.1 && tipPercentage <= 0.2) {
-        const tax = (subtotal + gst + tipPercentage) * ogtotal;
-        const tipAmount = (tax) + ogtotal;
-        const totalCost = tipAmount;
-        confirm('Original amount : ' + ogtotal + '\nTax amount : ' + tax.toFixed(2) + '\nTotal Amount : ' + totalCost.toFixed(2)+'\n Ok To Pay');
+        if (ogtotal===0){
+            alert('Please select select slices you need');
+        }
+        else{
+            const tax = (subtotal + gst + tipPercentage) * ogtotal;
+            const tipAmount = (tax) + ogtotal;
+            const totalCost = tipAmount;
+            confirm('Original amount : ' + ogtotal + '\nTax amount : ' + tax.toFixed(2) + '\nTotal Amount : ' + totalCost.toFixed(2)+'\n Ok To Pay');
+        }
     } else {
         alert('Please enter a tip percentage between 10-20%.');
     }
