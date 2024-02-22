@@ -2,20 +2,58 @@
 <html>
 <head>
     <style>
+         body {
+            background-image: url('/exno6/asserts/road.png');
+        }
+
+        #finishline {
+            position: absolute;
+            top: 0;
+            left: 1000px;
+            width: 10px;
+            height: 100vh;
+            background-color: white;
+            z-index: -1;
+        }
+
+        .centerbtn {
+            position: absolute;
+            font-weight: bolder;
+            left: 45%;
+            top: 70%;
+        }
+
         #car {
             position: absolute;
-            top: 50px;
+            top: 275px;
             left: 0;
-            width: 100px;
+            width: 200px;
+        }
+
+        button {
+            background-color: rgba(128, 128, 128, 0.423);
+            color: yellow;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 15px;
+            box-shadow: rgba(221, 255, 0, 0.35) 0px 5px 15px;
+        }
+
+        button:hover {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         }
     </style>
 </head>
 <body>
 
     <img id="car" src="/exno6/asserts/car.png" alt="Car">
-    <button onclick="start()">Start</button>
-    <button onclick="stop()">Stop</button>
-    <button onclick="reset()">Reset</button>
+    <div id="finishline"></div>
+
+    <div class="centerbtn">
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="reset()">Reset</button>
+    </div>
 
     <script>
         var car = document.getElementById('car');
@@ -24,11 +62,11 @@
 
         function start() {
             clearInterval(id);
-            id = setInterval(frame, 10);
+            id = setInterval(frame, 2);
         }
 
         function frame() {
-            if (pos == 100) {
+            if (pos == 1000) {
                 clearInterval(id);
             } else {
                 pos++; 
