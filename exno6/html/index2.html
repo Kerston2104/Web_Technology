@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #car {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <img id="car" src="/exno6/asserts/car.png" alt="Car">
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="reset()">Reset</button>
+
+    <script>
+        var car = document.getElementById('car');
+        var pos = 0;
+        var id;
+
+        function start() {
+            clearInterval(id);
+            id = setInterval(frame, 10);
+        }
+
+        function frame() {
+            if (pos == 100) {
+                clearInterval(id);
+            } else {
+                pos++; 
+                car.style.left = pos + 'px'; 
+            }
+        }
+
+        function stop() {
+            clearInterval(id);
+        }
+
+        function reset(){
+            clearInterval(id);
+            car.style.left='0px';
+            pos=0;
+        }
+
+    </script>
+
+</body>
+</html>

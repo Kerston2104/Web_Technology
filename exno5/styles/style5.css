@@ -1,20 +1,21 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 
 }
 
-html{
+body {
     background: url("/exno5/asserts/pizzabg.jpg");
     height: 100vh;
-} 
+    background-repeat: no-repeat;   
+}
 
 
 
 .chkimg .img1 img,
 .chkimg2 .img2 img,
-.chkimg3 .img3 img{
+.chkimg3 .img3 img {
     cursor: pointer;
     border-radius: 10px;
 
@@ -22,63 +23,65 @@ html{
 
 .chkimg:active,
 .chkimg2:active,
-.chkimg3:active{
+.chkimg3:active {
     transform: scale(0.97);
 }
 
 .chkimg:hover,
 .chkimg2:hover,
-.chkimg3:hover{
+.chkimg3:hover {
     scale: 0.97;
     transition: all 0.3s ease-in-out;
 }
 
 .img1 img,
 .img2 img,
-.img3 img{
+.img3 img {
     border: 4px solid red;
 }
 
-.chkimg input:checked ~ .img1 img,
-.chkimg2 input:checked ~ .img2 img,
-.chkimg3 input:checked ~ .img3 img{
-    border:7px solid green;
+.chkimg input:checked~.img1 img,
+.chkimg2 input:checked~.img2 img,
+.chkimg3 input:checked~.img3 img {
+    border: 7px solid green;
 }
 
 .chkimg input,
 .chkimg2 input,
-.chkimg3 input{
+.chkimg3 input {
     display: none;
 }
 
 .chkimg p,
 .chkimg2 p,
-.chkimg3 p{
+.chkimg3 p {
     font-size: large;
     font-weight: bolder;
     text-align: center;
-    color: yellow;
+    color: rgb(233,217,169);
 }
 
-.chkimgcontainer,.chkamount{
+.chkimgcontainer,
+.chkamount {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.formscontainer{
+.formscontainer {
     text-align: center;
-    color: darkblue;
+    font-weight: bolder;
+    color: rgb(17,22,25);
     position: relative;
 }
 
-.formbg{
-    margin-top:250px;
+.formbg {
+    margin-top: 250px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: rgba(255, 166, 0, 0.541);
+    transform: translate(-50%, -50%);
+    background-color:#e7dec190;
     border-radius: 15px;
     width: 400px;
     height: 480px;
@@ -86,23 +89,23 @@ html{
     padding: 20px;
 }
 
-.formbg label{
+.formbg label {
     font-weight: bold;
 }
 
-.formbg p{
+.formbg p {
     font-size: larger;
     font-weight: bolder;
 }
 
-.condition span{
-    color:red;
+.condition span {
+    color: red;
 }
 
+input[type='text'],
 input[type='number'],
-input[type='number'],
-input[type='email']{
-    background-color: rgba(255, 0, 0, 0.596);
+input[type='email'] {
+    background-color: rgba(17, 22, 25, 0.536);
     color: aliceblue;
     padding: 10px;
     width: 100%;
@@ -110,44 +113,44 @@ input[type='email']{
     border-radius: 10px;
 }
 
-input[type='checkbox']{
+input[type='checkbox'] {
     accent-color: red;
 }
 
-input[type='radio']{
+input[type='radio'] {
     accent-color: red;
 }
 
+input[type='text']::placeholder,
 input[type='number']::placeholder,
-input[type='number']::placeholder,
-input[type='email']::placeholder{
+input[type='email']::placeholder {
     color: aliceblue;
 }
 
-input[type='submit']{
+input[type='submit'] {
     width: 100%;
-    padding:10px;
+    padding: 10px;
     color: brown;
     border-radius: 10px;
     background-color: white;
-    border:1px solid white;
+    border: 1px solid white;
     transition: all 0.3s ease-in-out;
 }
 
 
 
-input[type='submit']:hover{
+input[type='submit']:hover {
     background-color: orange;
     color: white;
     border-radius: 15px;
 }
 
-.toppingcont{
+.toppingcont {
     display: flex;
     justify-content: space-around;
 }
 
-.rdcontent{
+.rdcontent {
     display: flex;
     justify-content: space-around;
 }

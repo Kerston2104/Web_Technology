@@ -1,0 +1,66 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/exno6/asserts/q1.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
+.flexmet {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.heading {
+    color: rgb(255, 132, 0);
+    padding-top: 30px;
+
+    text-align: center;
+    justify-content: center;
+}
+
+#box {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 200px;
+    margin: 20px auto;
+    transition: all 0.3s ease;
+}
+
+.formcontent,
+.boxcontent {
+    line-height: 40px;
+    text-align: center;
+}
+
+input[type='text'] {
+    padding: 5px;
+    border: 2px solid white;
+    width: 75%;
+    border-radius: 20px;
+    background-color: rgba(21, 175, 21, 0.586);
+}
+
+input::placeholder {
+    color: wheat;
+}
+
+input[type='submit'] {
+    background-color: green;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    width: 100%;
+    border-radius: 30px;
+}

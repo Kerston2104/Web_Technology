@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-image: url('/exno6/asserts/road.png');
+        }
+
+        #car {
+            position: absolute;
+            top: 275px;
+            left: 0;
+            width: 200px;
+        }
+
+        #finishLine {
+            position: absolute;
+            top: 0;
+            left: 1000px;
+            width: 10px;
+            height: 100vh;
+            background-color: white;
+            z-index: -1;
+        }
+
+        #message {
+            position: absolute;
+            top: 150px;
+            left: 0;
+            color: aliceblue;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .centerbtn {
+            position: absolute;
+            left: 45%;
+            top: 70%;
+        }
+
+        button {
+            background-color: rgba(128, 128, 128, 0.423);
+            color: yellow;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 15px;
+            box-shadow: rgba(221, 255, 0, 0.35) 0px 5px 15px;
+        }
+
+        button:hover {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img id="car" src="/exno6/asserts/car.png" alt="Car">
+    <div id="finishLine"></div>
+    <div id="message"></div>
+
+    <div class="centerbtn">
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+    <script>
+        var car = document.getElementById('car');
+        var finishLine = document.getElementById('finishLine');
+        var message = document.getElementById('message');
+        var pos = 0;
+        var id;
+
+        function start() {
+            clearInterval(id);
+            id = setInterval(frame, 2);
+        }
+
+        function frame() {
+            if (pos >= finishLine.offsetLeft) {
+                clearInterval(id);
+                message.innerHTML = "Finished!";
+            } else {
+                pos++;
+                car.style.left = pos + 'px';
+            }
+        }
+
+        function stop() {
+            clearInterval(id);
+        }
+
+        function reset() {
+            clearInterval(id);
+            car.style.left = '0px';
+            pos = 0;
+            message.innerHTML = "";
+        }
+
+    </script>
+
+</body>
+
+</html>

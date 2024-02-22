@@ -3,7 +3,7 @@ const tipamt = 0;
 
 function calculateTotalCost() {
     let subtotal = 0;
-    let ogtotal = 0; // Initialize ogtotal
+    let ogtotal = 0;
 
     const pizzaSize = document.querySelector('input[name="size"]:checked');
     if (pizzaSize) {
@@ -24,15 +24,17 @@ function calculateTotalCost() {
         }
     }
 
+    var slices = document.getElementById('slices').value;
+    ogtotal *= slices;
+
     const tipbox = prompt('Enter your tip amount (10-20% of the total cost after tax)', 0);
     const tipPercentage = parseFloat(tipbox) / 100;
 
-    // Check if the entered tip percentage is within the range of 10-20%
     if (tipPercentage >= 0.1 && tipPercentage <= 0.2) {
         const tax = (subtotal + gst + tipPercentage) * ogtotal;
         const tipAmount = (tax) + ogtotal;
         const totalCost = tipAmount;
-        alert('Original amount : ' + ogtotal + '\nTax amount : ' + tax.toFixed(2) + '\nTotal Amount : ' + totalCost.toFixed(2));
+        confirm('Original amount : ' + ogtotal + '\nTax amount : ' + tax.toFixed(2) + '\nTotal Amount : ' + totalCost.toFixed(2)+'\n Ok To Pay');
     } else {
         alert('Please enter a tip percentage between 10-20%.');
     }
