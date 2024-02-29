@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blink Window</title>
+
+    <!-- Include jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .backgroundinit{
+            background-color: gray;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #backgroundcont {
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+
+        }
+        .innercont{
+            display:flex;
+            background-color: rgb(83, 132, 201);
+            flex-direction: column;
+            padding: 20px;
+            border-radius: 10px;
+            line-height: 40px;
+        }
+
+        #close{
+            width: 100%;
+        }
+
+        #blink {
+            display: inline-block;
+            text-align: center;
+        }
+        select{
+            width: 250px;
+            color: rgb(83, 132, 201);
+            background-color: rgb(255, 255, 255);
+        }
+
+        button{
+            color: rgb(83, 132, 201);
+            padding: 10px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="backgroundinit">
+        <div id="backgroundcont">
+            <div class="innercont">
+                <h1 id="blink">Blink Window</h1>
+                <label for="ddbutton">Select a background Color:
+                    <select id="colorbtn">
+                        <option value="white">Select a color</option>
+                        <option value="red">Red</option>
+                        <option value="darkblue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                </label>
+                <button id="open">Open</button>
+                
+                <div id="hiddencontent">
+                    <p>If you click on this "Close" button, I will disappear automatically. </p>
+                    <button id="close">Close</button>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#hiddencontent').hide();
+            $("#open").click(function(){
+                $("#hiddencontent").show(); 
+            });
+            
+            $("#close").click(function(){
+                $("#hiddencontent").hide(); 
+            });
+        
+            $("#colorbtn").change(function(){
+                var selectedColor = $(this).val();
+                $(".backgroundinit").css("background-color", selectedColor);
+            });
+
+            // Blink Animation
+            function blinkAnimation() {
+                $("#blink").fadeOut(500).fadeIn(500, blinkAnimation);
+            }
+
+            blinkAnimation();
+        });
+    </script>
+</body>
+</html>
