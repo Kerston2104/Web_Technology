@@ -47,53 +47,56 @@
         </div>
         <div class="formscontainer">
             <div class="formcontent">
-                <form action="">
+                <!-- <form action=""> -->
                     <div class="formbg">
-                        <div class="contentform">
-                            <label for="mail">EMAIL:</label><br>
-                            <input type="email" id="mail" placeholder="Enter your email"><br>
-                            <label for="phone">Phone</label><br>
-                            <input type="text" id="phone" placeholder="Enter your number" maxlength="10"><br>
-                            <label for="slices">Number of slices:</label><br>
-                            <input type="number" placeholder="numberofslices" id="slices">
-                        </div>
-                        <div class="rdbutton">
-                            <p>PIZZA SIZE</p>
-                            <div class="rdcontent">
-                                <input type="radio" name="size" id="8inch" value="0.02">
-                                <label for="size">8-inch</label>
-                                <input type="radio" name="size" id="10inch" value="0.04">
-                                <label for="size">10-inch</label>
-                                <input type="radio" name="size" id="12inch" value="0.06">
-                                <label for="size">12-inch</label>
-                                <input type="radio" name="size" id="14inch" value="0.08">
-                                <label for="size">14-inch</label>
+                        <div class="formcolor">
+
+                            <div class="contentform">
+                                <label for="mail">EMAIL:</label><br>
+                                <input type="email" id="mail" placeholder="Enter your email"><br>
+                                <label for="phone">Phone</label><br>
+                                <input type="text" id="phone" placeholder="Enter your number" maxlength="10"><br>
+                                <label for="slices">Number of slices:</label><br>
+                                <input type="number" placeholder="numberofslices" id="slices">
+                            </div>
+                            <div class="rdbutton">
+                                <p>PIZZA SIZE</p>
+                                <div class="rdcontent">
+                                    <input type="radio" name="size" id="8inch" value="0.02">
+                                    <label for="size">8-inch</label>
+                                    <input type="radio" name="size" id="10inch" value="0.04">
+                                    <label for="size">10-inch</label>
+                                    <input type="radio" name="size" id="12inch" value="0.06">
+                                    <label for="size">12-inch</label>
+                                    <input type="radio" name="size" id="14inch" value="0.08">
+                                    <label for="size">14-inch</label>
+                                </div>
+                            </div>
+                            <div class="toppingsec">
+                                <p>TOPPINGS</p>
+                                <div class="toppingcont">
+                                    <input type="checkbox" id="food1" name="topping" value="0.1">
+                                    <label for="food1"> Pepperoni</label><br>
+                                    <input type="checkbox" id="food2" name="topping" value="0.1">
+                                    <label for="food2"> Onion</label><br>
+                                    <input type="checkbox" id="food3" name="topping" value="0.1">
+                                    <label for="food3"> Sausage</label><br>
+                                    <input type="checkbox" name="topping" id="food4" value="0.1">
+                                    <label for="food4">Mushroom</label>
+                                </div>
+                            </div>
+                            <div class="conditions">
+                                <input type="checkbox" name="conditions" id="conditions" required>
+                                <label for="conditions"><span style="color: red;">*</span> I agree the terms and
+                                    conditions</label>
+                            </div>
+                            <div class="submit">
+                                <input type="submit" onclick="calculateTotalCost()" value="Order Now">
+                                <div id="result"></div>
                             </div>
                         </div>
-                        <div class="toppingsec">
-                            <p>TOPPINGS</p>
-                            <div class="toppingcont">
-                                <input type="checkbox" id="food1" name="topping" value="0.1">
-                                <label for="food1"> Pepperoni</label><br>
-                                <input type="checkbox" id="food2" name="topping" value="0.1">
-                                <label for="food2"> Onion</label><br>
-                                <input type="checkbox" id="food3" name="topping" value="0.1">
-                                <label for="food3"> Sausage</label><br>
-                                <input type="checkbox" name="topping" id="food4" value="0.1">
-                                <label for="food4">Mushroom</label>
-                            </div>
-                        </div>
-                        <div class="conditions">
-                            <input type="checkbox" name="conditions" id="conditions" required>
-                            <label for="conditions"><span style="color: red;">*</span> I agree the terms and
-                                conditions</label>
-                        </div>
-                        <div class="submit">
-                            <input type="submit" onclick="calculateTotalCost()" value="Order Now">
-                        </div>
-                        <!-- <div id="result"></div> -->
                     </div>
-                </form>
+                <!-- </form> -->
             </div>
         </div>
     </div>

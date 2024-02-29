@@ -77,11 +77,11 @@
 
         function start() {
             clearInterval(id);
-            id = setInterval(frame, 2);
+            id = setInterval(frame, 0.5);
         }
 
         function frame() {
-            if (pos >= finishLine.offsetLeft) {
+            if (pos >= 810) {
                 clearInterval(id);
                 message.innerHTML = "Finished!";
             } else {
