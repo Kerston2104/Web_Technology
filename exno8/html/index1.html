@@ -58,8 +58,8 @@
                 <p>Employee Name: {{empname}}</p>
                 <p>Emp ID: {{empid}}</p>
                 <p>Salary Date: {{sdate | date:'dd/MM/yyyy'}}</p>
-                <p>Gross Salary:Rs.{{gs}}</p>
-                <p>Net Salary:Rs.{{ns}}</p>
+                <p>Gross Salary:Rs.{{gs | number}}</p>
+                <p>Net Salary:Rs.{{ns | number}}</p>
                 <p>Tax Deducted:Rs{{ta | number:2}}</p>
             </div>
         </div>
