@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payroll</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("EmployeePayrollCtrl", function($scope) {
+            $scope.gs = 0;
+            $scope.ta = 0;
+            $scope.ns = 0;
+            $scope.sdate = null;
+            
+            $scope.calculate = function() {
+                $scope.gs = parseFloat($scope.bs) + parseFloat($scope.hra) + parseFloat($scope.da);
+                if ($scope.gs > 80000) {
+                    $scope.ta = 0.2 * $scope.gs;
+                } else if ($scope.gs > 60000) {
+                    $scope.ta = 0.15 * $scope.gs;
+                } else if ($scope.gs > 40000) {
+                    $scope.ta = 0.1 * $scope.gs;
+                } else if ($scope.gs > 20000) {
+                    $scope.ta = 0.05 * $scope.gs;
+                } else {
+                    $scope.ta = 0;
+                }
+                $scope.ns = $scope.gs - $scope.ta;
+            }
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="EmployeePayrollCtrl">
+    <div class="container">
+        <h2 id="heading">Employee Payroll</h2>
+        <div class="contbg">
+            <div class="formcont">
+                <label for="name">Employee Name:</label><br>
+                <input type="text" ng-model="empname" id="name" placeholder="Name" autocomplete="off"><br>
+                <label for="empid">Emp ID:</label><br>
+                <input type="text" ng-model="empid" placeholder="Enter your ID" id="empid" autocomplete="off"><br>
+                <label for="date">Salary Date:</label><br>
+                <input type="date" ng-model="sdate" placeholder="Enter your basic salary" id="date"><br>
+                <label for="salary">Basic Salary:</label><br>
+                <input type="text" ng-model="bs" placeholder="Enter your salary" id="salary" autocomplete="off"><br>
+                <label for="hra">House Rent Allowance (HRA):</label><br>
+                <input type="text" ng-model="hra" id="hra" placeholder="Enter HRA" autocomplete="off"><br>
+                <label for="da">Dearness Allowance:</label><br>
+                <input type="text" ng-model="da" id="da" placeholder="Enter Your DA" autocomplete="off"><br>
+                <div class="btn">
+                    <input type="button" value="Calculate" id="btn" ng-click="calculate()"><br>
+                </div>
+            </div>
+            <div>
+                <h2>Calculated Salary</h2>
+                <p>Employee Name: {{empname}}</p>
+                <p>Emp ID: {{empid}}</p>
+                <p>Salary Date: {{sdate | date:'dd/MM/yyyy'}}</p>
+                <p>Gross Salary:Rs.{{gs}}</p>
+                <p>Net Salary:Rs.{{ns}}</p>
+                <p>Tax Deducted:Rs{{ta | number:2}}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

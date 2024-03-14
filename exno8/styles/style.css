@@ -1,0 +1,31 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+#heading {
+    text-align: center;
+}
+
+.contbg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.formcont{
+    background-color: bisque;
+    width: 400px;
+    padding: 35px;
+}
+
+.formcont label{
+    color: darkblue;
+}
+
+#btn{
+    background-color: brown;
+    color:white;
+}
