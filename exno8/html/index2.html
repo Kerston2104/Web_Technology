@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        angular.module('myApp', []).controller('controller', function($scope) {
+            $scope.states = [
+                'Tamil nadu',
+                'Karnataka',
+                'Andhra Pradesh',
+                'Telangana',
+                'Kerala',
+                'Goa',
+                'Gujarat',
+                'Manipur',
+                'Nagaland'
+            ];
+        });
+        </script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="controller">
+        <p><input type="text" ng-model="values"></p>
+        <ul>
+          <li ng-repeat="x in states | filter:values">
+            {{ x }}
+          </li>
+        </ul>
+        </div>
+</body>
+</html>
