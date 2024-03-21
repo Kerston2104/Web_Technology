@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="/jquery-3.7.1.min.js"></script>
+  <style>
+    .imgcontainer img {
+      width: 400px;
+      height: 200px;
+      position: absolute;
+    }
+
+    button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("img").animate({ bottom: '0%',height: "400px", width: "800px" });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="imgcontainer">
+    <img src="/exno6/asserts/car.png" alt="Image need to be shown">
+  </div>
+  <button>Start</button>
+</body>
+
+</html>

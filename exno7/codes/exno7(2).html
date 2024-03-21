@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="blink">
+            Kerston's page
+        </h1>
+    </div>
+</body>
+<script>
+    function effectFadeIn() {
+        $("# blink").fadeOut(800).fadeIn(800)
+        effectFadeOut()
+    }
+    function effectFadeOut() {
+        $("# blink").fadeIn(800).fadeOut(800)
+        effectFadeIn()
+    }
+    $(document).ready(function () {
+        effectFadeIn('box');
+    });
+    $(document).ready(function () {
+        $("# blink").fadeOut(800).fadeIn(800)
+        effectFadeOut()
+    });
+</script>
+
+</html>
