@@ -1,34 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script>
-        angular.module('myApp', []).controller('controller', function($scope) {
-            $scope.states = [
-                'Tamil nadu',
-                'Karnataka',
-                'Andhra Pradesh',
-                'Telangana',
-                'Kerala',
-                'Goa',
-                'Gujarat',
-                'Manipur',
-                'Nagaland'
-            ];
-        });
-        </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script>
+    angular.module('myApp', []).controller('controller', function ($scope) {
+      $scope.states = [
+        'Tamil nadu',
+        'Karnataka',
+        'Andhra Pradesh',
+        'Telangana',
+        'Kerala',
+        'Goa',
+        'Gujarat',
+        'Manipur',
+        'Nagaland'
+      ];
+    });
+  </script>
+  <style>
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    input{
+      background-color: #A6DEAE;
+      color: #020e54;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 20px;
+    }
+
+    li {
+      list-style-type: none;
+      background-color: #fca311;
+      color: #14213D;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
+
 <body>
-    <div ng-app="myApp" ng-controller="controller">
-        <p><input type="text" ng-model="values"></p>
+  <div ng-app="myApp" ng-controller="controller">
+    <div class="container">
+      <div class="contentbg">
+        <p><input type="text" placeholder="SEARCH BOX" ng-model="values"></p>
         <ul>
           <li ng-repeat="x in states | filter:values">
             {{ x }}
           </li>
         </ul>
-        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

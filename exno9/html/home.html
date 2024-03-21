@@ -1,0 +1,212 @@
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        text-decoration: none;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: #1f2123;
+    }
+
+    /* making top class enter */
+    .top {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: fixed;
+    }
+
+    /*class navigbar size and */
+    .navig {
+        background-color: #26282a;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    /* adding logo width */
+    .logo {
+        width: 50px;
+        padding: 10px;
+    }
+
+    /* MOBILE NAV ICON SIZE ADJUST */
+    .navicon {
+        width: 30px;
+        /* border: 5px solid red; */
+        margin-right: 20px;
+    }
+
+    /* font name and letter space and arranging in straighe line */
+    nav {
+        position: sticky;
+        letter-spacing: 1px;
+        font-family: Arial, Helvetica, sans-serif;
+        flex: 1;
+        text-align: right;
+        font-weight: bolder;
+    }
+
+    /* ALIGNING NAVE BAR TEXT */
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    /* giving colour to nav text,border rounded and padding */
+    nav ul li a {
+        color: #1A74E2;
+        padding: 0em;
+        border-radius: 40px;
+        transition: 0.3s ease all;
+    }
+
+    /* on hover color an bg change for desktop*/
+    nav ul li a:hover {
+        border-radius: 0%;
+        color: #6BD0FF;
+        /* background-color: #1A74E2; */
+        border: 2px solid #1A74E2;
+        border-style: none none solid none;
+        padding-bottom: 6px;
+
+    }
+
+
+    /* navigation bar pointer and hiding mobile nav icon */
+    nav .navicon {
+        cursor: pointer;
+        display: none;
+    }
+
+    .hi {
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hi-name {
+        flex-basis: 40%;
+        display: inline-block;
+        margin-left: 100px;
+        padding: 0%;
+        margin-top: 400px;
+        margin-bottom: 200px;
+    }
+
+    /* 1st text color and adding letter spacing */
+    .hi-name h1 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+        color: #6BD0FF;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    /* 2nd text color and adding letter spacing */
+    .hi-name h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+        color: #3fa0ef;
+        padding: 0%;
+    }
+
+    /* 3rd text color and adding letter spacing */
+    .hi-name h3 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+        padding: 0%;
+        color: #1A74E2;
+    }
+
+    /* 4th text color and adding letter spacing and style to hover effect */
+    .hi-name h4 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+        font-weight: bold;
+        color: #6BD0FF;
+        border: 2px solid #6BD0FF;
+        padding: 15px;
+        display: inline-block;
+        top: 30px;
+        border-radius: 40px;
+        margin-left: 30px;
+        transition: 0.3s ease all;
+    }
+
+    /* adding hover effect for above text */
+    .hi-name a h4:hover {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        display: inline-block;
+        border: 2px solid #6BD0FF;
+        /* background-color: #1f2123; */
+        color: #1A74E2;
+        border-style: dotted none dotted none;
+        border-radius: 0%;
+    }
+
+    /* adding my image on the right side */
+    .image {
+        float: right;
+        margin-right: 20%;
+        max-width: 700px;
+        margin-top: 200px;
+        width: auto;
+
+        height: 100%;
+        /* margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 100px; */
+    }
+
+    #logbtn {
+        color: #1f2123;
+        background-color: #1A74E2;
+        padding: 10px;
+    }
+
+    #logbtn:hover {
+        color: #1A74E2;
+        background-color: #1f2123;
+    }
+</style>
+<div class="top">
+
+    <div class="navig">
+        <a href="#!/"><img src="../asserts/Asset.png" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="#!/">PROFILE</a></li>
+                <li><a href="#!academic">ACADEMICS</a></li>
+                <li><a href="#!project">PROJECTS</a></li>
+                <li><a id="logbtn" href="#!loginsignup">LOGIN/SIGNUP</a></li>
+                <li><a href="#!contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
+<div class="hi" id="home">
+
+    <div class="hi-name">
+        <h1>Hi!!</h1>
+        <h2>I am</h2>
+        <h3>Kerston Anto Singh.</h3>
+        <a href="#!contact">
+            <h4>CONTACT ME</h4>
+        </a>
+    </div>
+    <div class="image"><img src="../asserts/profile.png" width="400px" style="border-radius: 100%;">
+
+    </div>
+
+</div>

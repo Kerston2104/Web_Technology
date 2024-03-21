@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style2.css">
+    <link rel="shortcut icon" href="../asserts/Asset.png" type="image/x-icon">
+    <script src=" https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.8.2/angular-route.js"></script>
+    <script>
+        var app = angular.module("myapp", ["ngRoute"]);
+        app.controller('myController');
+        app.config(function ($routeProvider) {
+            $routeProvider.when('/', {
+                templateUrl: 'home.html',
+                controller: 'mycontroller'
+            })
+                .when('/academic', {
+                    templateUrl: 'academics.html',
+                    controller: 'mycontroller'
+                })
+                .when('/project', {
+                    templateUrl: 'projects.html',
+                    controller: 'mycontroller'
+                })
+                .when('/loginsignup', {
+                    templateUrl: 'loginsign.html',
+                    controller: 'mycontroller'
+                })
+                .when('/contact', {
+                    templateUrl: 'contact.html',
+                    controller: 'mycontroller'
+                })
+        });
+    </script>
+</head>
+
+<body ng-app="myapp" ng-coontroller="mycontroller">
+    <ng-view>
+
+    </ng-view>
+</body>
+
+</html>

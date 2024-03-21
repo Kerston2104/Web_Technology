@@ -1,0 +1,204 @@
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        text-decoration: none;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: #1f2123;
+    }
+
+    /* making top class enter */
+    .top {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: fixed;
+    }
+
+    /*class navigbar size and */
+    .navig {
+        background-color: #26282a;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    /* adding logo width */
+    .logo {
+        width: 50px;
+        padding: 10px;
+    }
+
+    /* MOBILE NAV ICON SIZE ADJUST */
+    .navicon {
+        width: 30px;
+        /* border: 5px solid red; */
+        margin-right: 20px;
+    }
+
+    /* font name and letter space and arranging in straighe line */
+    nav {
+        position: sticky;
+        letter-spacing: 1px;
+        font-family: Arial, Helvetica, sans-serif;
+        flex: 1;
+        text-align: right;
+        font-weight: bolder;
+    }
+
+    /* ALIGNING NAVE BAR TEXT */
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    /* giving colour to nav text,border rounded and padding */
+    nav ul li a {
+        color: #1A74E2;
+        padding: 0em;
+        border-radius: 40px;
+        transition: 0.3s ease all;
+    }
+
+    /* on hover color an bg change for desktop*/
+    nav ul li a:hover {
+        border-radius: 0%;
+        color: #6BD0FF;
+        /* background-color: #1A74E2; */
+        border: 2px solid #1A74E2;
+        border-style: none none solid none;
+        padding-bottom: 6px;
+
+    }
+
+
+    /* navigation bar pointer and hiding mobile nav icon */
+    nav .navicon {
+        cursor: pointer;
+        display: none;
+    }
+
+    .about-sec {
+        /* border-style: none solid solid solid; */
+        text-align: center;
+        margin-bottom: 210px;
+    }
+
+    /* color for about me text heading */
+    .about h1 {
+        color: #1A74E2;
+        /* border:2px solid #1A74E2;
+    border-style: solid none none none; */
+    }
+
+    /* side heading color adding */
+    .about h3 {
+        /* border:2px solid #e6e8e3; */
+        color: #3fa0ef;
+    }
+
+    /* paragraph about me text align and color  */
+    .about p {
+        text-indent: 50px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        justify-content: center;
+        margin-left: 250px;
+        margin-right: 250px;
+        font-size: 18px;
+        font-weight: 900;
+        background: rgb(255, 255, 255, 0.02);
+        padding: 10px;
+        border-radius: 15px;
+        text-align: center;
+        border: 2px solid #0055ab;
+        color: #6BD0FF;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    /* about me text color font size adding */
+    .about a {
+        text-transform: capitalize;
+        font-weight: bolder;
+        color: #6BD0FF;
+        /* position: relative; don't overlap occur */
+        font-family: 'Baskervville', serif;
+        border-style: none none solid none;
+    }
+
+    /* link hover if about me school and college */
+    .about a:hover {
+        color: #1A74E2;
+    }
+
+    #logbtn {
+        color: #1f2123;
+        background-color: #1A74E2;
+        padding: 10px;
+    }
+
+    #logbtn:hover {
+        color: #1A74E2;
+        background-color: #1f2123;
+    }
+</style>
+<div class="top">
+
+    <div class="navig">
+        <a href="#!/"><img src="../asserts/Asset.png" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="#!/">PROFILE</a></li>
+                <li><a href="#!academic">ACADEMICS</a></li>
+                <li><a href="#!project">PROJECTS</a></li>
+                <li><a id="logbtn" href="#!loginsignup">LOGIN/SIGNUP</a></li>
+                <li><a href="#!contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="about-sec">
+
+    <div class="about">
+
+        <!-- lines to skip -->
+        <br id="about"><br><br>
+        <!-- about me heading -->
+        <h1>~ABOUT ME~</h1>
+        <!-- sub heading of about me -->
+        <h3>Kerston Anto Singh | B.TECH STUDENT</h3><br>
+        <!-- paragraph of about me content -->
+        <p>Hi!!, I am Kerston Anto Singh I had done my schooling in <a href="https://main.rosemaryschools.com/"
+                target="_blank">rose mary school</a>
+            and started My undergraduate programme in <a href="https://www.karunya.edu/" target="_blank">karunya
+                unuversity</a>.
+            <br><br> It was
+            my first WEBPAGE using HTML AND CSS created with what I'd learned.
+            And I like to know about AI workes in many projects.
+            To make best AI for the Future World
+            <br><br><br> PERSONAL INTEREST <br>
+            I like to spend my leisure time by watching video's which
+            are related to Graphic Designing Software's, Photoshop,
+            Video Editing software, and Playing games
+            these are my free time hobby's.
+            And <I></I> love to do these things
+            <!-- br to leave 3 line space -->
+            <br><br><br>
+            *SKILLS ???*
+            <br>
+            Skills are good to us talking about my skills
+            wait I thing it was not the right place to
+            talk about my skills here <br><br>
+            ~just scroll down to skill section</section>~
+        </p>
+    </div>
+</div>

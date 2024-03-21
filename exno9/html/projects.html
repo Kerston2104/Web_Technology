@@ -1,0 +1,538 @@
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: #1f2123;
+    }
+
+    /* making top class enter */
+    .top {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: fixed;
+    }
+
+    /*class navigbar size and */
+    .navig {
+        background-color: #26282a;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+
+    /* adding logo width */
+    .logo {
+        width: 50px;
+        padding: 10px;
+    }
+
+    /* MOBILE NAV ICON SIZE ADJUST */
+    .navicon {
+        width: 30px;
+        /* border: 5px solid red; */
+        margin-right: 20px;
+    }
+
+    /* font name and letter space and arranging in straighe line */
+    nav {
+        position: sticky;
+        letter-spacing: 1px;
+        font-family: Arial, Helvetica, sans-serif;
+        flex: 1;
+        text-align: right;
+        font-weight: bolder;
+    }
+
+    /* ALIGNING NAVE BAR TEXT */
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    /* giving colour to nav text,border rounded and padding */
+    nav ul li a {
+        color: #1A74E2;
+        padding: 0em;
+        border-radius: 40px;
+        transition: 0.3s ease all;
+    }
+
+    /* on hover color an bg change for desktop*/
+    nav ul li a:hover {
+        border-radius: 0%;
+        color: #6BD0FF;
+        /* background-color: #1A74E2; */
+        border: 2px solid #1A74E2;
+        border-style: none none solid none;
+        padding-bottom: 6px;
+    }
+
+    #button
+
+    /* navigation bar pointer and hiding mobile nav icon */
+    nav .navicon {
+        cursor: pointer;
+        display: none;
+    }
+
+    .hi {
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #logbtn {
+        color: #1f2123;
+        background-color: #1A74E2;
+        padding: 10px;
+    }
+
+    #logbtn:hover {
+        color: #1A74E2;
+        background-color: #1f2123;
+    }
+
+
+
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* adding scroller path */
+    ::-webkit-scrollbar {
+        width: 7px;
+        background-color: aquamarine;
+    }
+
+    /* adding scrollbar track  */
+    ::-webkit-scrollbar-track {
+        background: transparent;
+        margin-block: 12px;
+        border-radius: 40px;
+    }
+
+    /* adding scroll to roller */
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(aqua, #7689de);
+        border-radius: 40px;
+    }
+
+    /* hover effect fo roller */
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(#7689de, aqua);
+        border-radius: 40px;
+    }
+
+    body {
+        background: linear-gradient(45deg, #7689de, #a9dec3);
+        padding: 0px 30px 0px 0px;
+        padding-bottom: 0%;
+
+    }
+
+    .container {
+        margin-left: 90px;
+    }
+
+    .container .heading {
+
+        text-align: center;
+        padding-bottom: 15px;
+        color: aliceblue;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        font-size: 50px;
+    }
+
+    .container .boxcont {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        /* grid-template-columns:repeat(autofit, minmax(270px,1fr)) ; */
+        gap: 0px;
+    }
+
+    .container .boxcont .box {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .92);
+        border-radius: 10px;
+        background-color: aliceblue;
+        text-align: center;
+        padding: 30px 20px;
+        width: 85%;
+        margin: 20px;
+    }
+
+    .container .boxcont .box:hover {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    }
+
+    .container .boxcont .box img {
+        height: 100px;
+    }
+
+    .container .boxcont .box h3 {
+        color: #1f2123;
+        font-size: 22px;
+        padding: 10px 0;
+    }
+
+    .container .boxcont .box h5 {
+        color: black;
+    }
+
+    .container .boxcont .box h4 {
+        color: black;
+    }
+
+    .container .boxcont .box p {
+        color: #1f2123;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .bottom {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        color: white;
+    }
+
+    .bottom p {
+        margin-top: 20px;
+        font-weight: bold;
+        text-shadow: 0px 5px 10px #1f2123;
+        margin-bottom: 20px;
+    }
+
+    @media only screen and (max-width:64em) and (max-width:26.5625em) {
+        .container {
+            margin-left: 0px;
+        }
+
+        .container .heading {
+            font-size: 30px;
+        }
+
+        body {
+            background: linear-gradient(45deg, #7689de, #a9dec3);
+        }
+
+        .container .boxcont {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 10px;
+        }
+
+        .container .boxcont .box {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+            border-radius: 10px;
+            background-color: aliceblue;
+            text-align: center;
+            padding: 30px 20px;
+            width: 100%;
+            margin: 15px;
+        }
+    }
+
+
+
+    @media only screen and (max-width:26.5625em) {
+        .container {
+            padding: 0%;
+            margin-left: 0px;
+        }
+
+        .container .heading {
+            font-size: 30px;
+        }
+
+        body {
+            background: linear-gradient(45deg, #7689de, #a9dec3);
+        }
+
+        .container .boxcont {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 10px;
+        }
+
+        .container .boxcont .box {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+            border-radius: 10px;
+            background-color: aliceblue;
+            text-align: center;
+            padding: 30px 20px;
+            width: 100%;
+            margin: 15px;
+        }
+    }
+
+    @media only screen and (max-width:48em) and (min-width:26.5625em) {
+        .container {
+            margin-left: 0px;
+        }
+
+        .container .heading {
+            font-size: 30px;
+        }
+
+        body {
+            background: linear-gradient(45deg, #7689de, #a9dec3);
+        }
+
+        .container .boxcont {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 10px;
+        }
+
+        .container .boxcont .box {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+            border-radius: 10px;
+            background-color: aliceblue;
+            text-align: center;
+            padding: 30px 20px;
+            width: 100%;
+            margin: 15px;
+        }
+    }
+
+    @media only screen and (max-width:64em) and (min-width:48em) {
+        .container {
+            margin-left: 0px;
+        }
+
+        .container .heading {
+            font-size: 30px;
+        }
+
+        body {
+            background: linear-gradient(45deg, #7689de, #a9dec3);
+        }
+
+        .container .boxcont {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 10px;
+        }
+
+        .container .boxcont .box {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+            border-radius: 10px;
+            background-color: aliceblue;
+            text-align: center;
+            padding: 30px 20px;
+            width: 100%;
+            margin: 15px;
+        }
+    }
+</style>
+<div class="top">
+
+    <div class="navig">
+        <a href="#!/"><img src="../asserts/Asset.png" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="#!/">PROFILE</a></li>
+                <li><a href="#!academic">ACADEMICS</a></li>
+                <li><a href="#!project">PROJECTS</a></li>
+                <li><a id="logbtn" href="#!loginsignup">LOGIN/SIGNUP</a></li>
+                <li><a href="#!contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
+<div class="bg">
+    <div class="container">
+        <div class="heading">MY PROJECTS</div>
+        <div class="boxcont">
+            <div class="box">
+                <a href="https://github.com/Kerston2104/PYTHON_PROJECTS" target="_blank">
+                    <img src="../image/github.png" alt="">
+                    <h3>PYTHON PROJECTS</h3>
+                    <h5>GITHUB REPO</h5>
+                    <p>This GitHub repository contains a collection of Python programs covering various topics and
+                        problem-solving exercises.
+                        The programs are organized into different directories based on their respective topics. In this
+                        description,
+                        we will explore the contents of the repository and provide an overview of the programs included.
+                    </p>
+                    <h4>UPDATED Date:26 JUNE,2023</h4>
+                </a>
+            </div>
+            <div class="box">
+                <a href="/TBA/tba.html" target="_blank">
+                    <img src="../image/tensorflow.png" alt="">
+                    <h3>TENSORFLOW</h3>
+                    <h5>GITHUB REPO</h5>
+                    <p> With a collection of Jupyter Notebooks and practical code examples,
+                        you'll embark on an interactive learning journey to understand tensors,
+                        build TensorFlow graphs, optimize models, and explore real-world applications.</p>
+                    <h4>Issued Date: WILL BE ANNOUNCED</h4>
+                </a>
+            </div>
+            <div class="box">
+                <a href="https://github.com/Kerston2104/JAVA_PROJECTS" target="_blank">
+                    <img src="../image/certificates/java.png" alt="">
+                    <h3>JAVA PROJECTS</h3>
+                    <h5>GITHUB REPO</h5>
+                    <p>Welcome to our Java Basic Programs repository, where we present concise and powerful examples in
+                        just four lines of
+                        code. Unleash the potential of Java's simplicity and efficiency while mastering essential
+                        programming concepts.</p>
+                    <h4>Issued Date: WILL BE ISSUED SOON</h4>
+                </a>
+            </div>
+            <!-- <div class="box">
+               <a href="" target="_blank">
+               <img src="../image/github.png" alt="">
+               <h3>PYTHON</h3>
+               <h5>Issued by IBM</h5>
+               <p>contain about project</p>
+               <h4>Issued Date</h4>
+               </a>
+           </div>
+           <div class="box">
+               <a href="" target="_blank">
+               <img src="../image/github.png" alt="">
+               <h3>PYTHON</h3>
+               <h5>Issued by IBM</h5>
+               <p>contain about project</p>
+               <h4>Issued Date</h4>
+               </a>
+           </div> -->
+        </div>
+        <div class="heading"> CERTIFICATIONS </div>
+
+        <div class="boxcont">
+
+            <div class="box">
+                <a href="https://simpli-web.app.link/e/Mdocb32IlBb" target="_blank">
+                    <img src="../image/certificates/skill up python.jpg" alt="">
+                    <h3>PYTHON</h3>
+                    <h5>Issued by SkillUp</h5>
+                    <p>"Programming with Python 3.x on SkillUp by Simplilearn" is a comprehensive online course
+                        designed to teach participants the fundamentals of programming using the Python programming
+                        language.
+                        The course is specifically focused on Python 3.x version, which is the latest stable release of
+                        Python.</p>
+                    <h4>Issued Date:Jan 30,2023</h4>
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="https://www.credly.com/badges/d4bde465-7520-40c7-ac2a-59b6f385fd01/public_url" target="_blank">
+                    <img src="../image/certificates/data-science-tools.png" alt="" srcset="">
+                    <h3>Data Science Tools</h3>
+                    <h5>Issued by IBM</h5>
+                    <p>This badge earner is able to use Jupyter Notebooks including its features and popular
+                        tools used by R Programmers including RStudio IDE.
+                        The earner understands how to use various data science and data visualization
+                        tools hosted on Skills Network Labs.</p>
+                    <h4>Issued Date:June 30,2023</h4>
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="https://www.credly.com/badges/045faecf-b269-439a-a502-2389c49b038c/public_url" target="_blank">
+                    <img src="../image/certificates/data-science-foundations-level-1.png" alt="">
+                    <h3>Data Science Foundations - Level 1</h3>
+                    <h5>Issued by IBM</h5>
+                    <p>This badge earner has an understanding of the possibilities and opportunities that data science,
+                        analytics and big data bring to new applications in any industry.</p>
+                    <h4>Issued Date:June 20, 2023</h4>
+                </a>
+            </div>
+            <div class="box">
+                <a href="https://www.credly.com/badges/e715a827-b6c4-4a7a-9f5f-8bd585aa580c/public_url" target="_blank">
+                    <img src="../image/certificates/python-for-data-science-and-ai.png" alt="">
+                    <h3>Python for Data Science and AI</h3>
+                    <h5>Issued by IBM Coursera</h5>
+                    <p>This badge earner has the core skills in Python such as critical data structures,
+                        programming fundamentals and experience with core libraries for data science.
+                        They can apply this knowledge to work with data and develop applications for data science. </p>
+                    <h4>Issued Date: July 04, 2023</h4>
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="../image/certificates/AWS AI.jpg" target="_blank">
+                    <img src="../image/certificates/AWS AI.jpg" alt="">
+                    <h3>Introduction to Artificial Intelligence</h3>
+                    <h5>Issued by AWS</h5>
+                    <p>Discover the world of artificial intelligence with AWS Training and Certification's "Introduction
+                        to Artificial Intelligence"
+                        course. Learn foundational AI concepts, explore machine learning algorithms, and understand how
+                        to leverage AWS AI services.
+                        Equip yourself with the skills
+                        to build intelligent applications and gain a competitive edge in the rapidly evolving AI
+                        landscape</p>
+                    <h4>Issued Date: May 30 ,2022</h4>
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="../image/certificates/c programing.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="../image/certificates/c programing.jpg" alt="">
+                    <h3>PROGRAMING ESSENTIAL C</h3>
+                    <h5>Issued by CISCO</h5>
+                    <p>Learn C programming from scratch with "Programming Essentials in C" course.
+                        Master syntax, control structures, functions,
+                        arrays, and pointers. Solve real-world challenges and build a strong programming foundation.</p>
+                    <h4>Issused Date: Nov 21 , 2022</h4>
+                </a>
+            </div>
+            <div class="box">
+                <a href="../image/certificates/DAF .jpg" target="_blank">
+                    <img src="../image/certificates/DAF .jpg" alt="">
+                    <h3>Data Analytics Fundamentals</h3>
+                    <h5>Issued by AWS</h5>
+                    <p>"Data Analytics Fundamentals in AWS" is a comprehensive course that introduces participants to
+                        the core principles
+                        of data analysis using AWS services. Learn
+                        to extract, transform, and visualize data with hands-on experience in Amazon Redshift, Athena,
+                        QuickSight, and more</p>
+                    <h4>Issued Date: Nov 2 , 2022</h4>
+                </a>
+            </div>
+            <div class="box">
+                <a href="/image/certificates/URK22AI1001-Connected Things-certificate_page-0001.jpg" target="_blank">
+                    <img src="/image/certificates/URK22AI1001-Connected Things-certificate_page-0001.jpg" alt="">
+                    <h3>Internet of things</h3>
+                    <h5>Issued by CISCO</h5>
+                    <p>For completing Cisco networking Academy connecting things course
+                        and demonstrating the ability to perform and explain IOT technologies
+                        are Transforming Business and society
+                        Use sensor , actuator and microcontroller to prototype IOT solution </p>
+                    <h4>Issued Date: May 1, 2023</h4>
+                </a>
+            </div>
+            <!-- <div class="box">
+               <a href="" target="_blank">
+               <img src="../image/github.png" alt="">
+               <h3>PYTHON</h3>
+               <h5>Issued by IBM</h5>
+               <p>contain about project</p>
+               <h4>Issued Date</h4>
+               </a>
+           </div> -->
+        </div>
+    </div>
+</div>
+<div class="bottom">
+    <p>Copyright © Kerston anto | all rights reserved </p>
+</div>

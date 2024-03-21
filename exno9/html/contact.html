@@ -1,0 +1,188 @@
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        text-decoration: none;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: #1f2123;
+    }
+
+    /* making top class enter */
+    .top {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: fixed;
+    }
+
+    /*class navigbar size and */
+    .navig {
+        background-color: #26282a;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    /* adding logo width */
+    .logo {
+        width: 50px;
+        padding: 10px;
+    }
+
+    /* MOBILE NAV ICON SIZE ADJUST */
+    .navicon {
+        width: 30px;
+        /* border: 5px solid red; */
+        margin-right: 20px;
+    }
+
+    /* font name and letter space and arranging in straighe line */
+    nav {
+        position: sticky;
+        letter-spacing: 1px;
+        font-family: Arial, Helvetica, sans-serif;
+        flex: 1;
+        text-align: right;
+        font-weight: bolder;
+    }
+
+    /* ALIGNING NAVE BAR TEXT */
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    /* giving colour to nav text,border rounded and padding */
+    nav ul li a {
+        color: #1A74E2;
+        padding: 0em;
+        border-radius: 40px;
+        transition: 0.3s ease all;
+    }
+
+    /* on hover color an bg change for desktop*/
+    nav ul li a:hover {
+        border-radius: 0%;
+        color: #6BD0FF;
+        /* background-color: #1A74E2; */
+        border: 2px solid #1A74E2;
+        border-style: none none solid none;
+        padding-bottom: 6px;
+
+    }
+
+
+    /* navigation bar pointer and hiding mobile nav icon */
+    nav .navicon {
+        cursor: pointer;
+        display: none;
+    }
+
+    .hi {
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #logbtn {
+        color: #1f2123;
+        background-color: #1A74E2;
+        padding: 10px;
+    }
+
+    #logbtn:hover {
+        color: #1A74E2;
+        background-color: #1f2123;
+    }
+
+
+    
+    input[type=text],
+    input[type='email'],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+
+    }
+
+    input[type=submit] {
+        background-color: #1A74E2;
+        color: #1f2123;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        color: #1A74E2;
+        background-color: #6BD0FF;
+    }
+
+    
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .container {
+        color: #1A74E2;
+    }
+</style>
+<div class="top">
+
+    <div class="navig">
+        <a href="#!/"><img src="../asserts/Asset.png" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="#!/">PROFILE</a></li>
+                <li><a href="#!academic">ACADEMICS</a></li>
+                <li><a href="#!project">PROJECTS</a></li>
+                <li><a id="logbtn" href="#!loginsignup">LOGIN/SIGNUP</a></li>
+                <li><a href="#!contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</div>
+<div class="contactcont">
+    <h2>CONTACT ME</h2>
+    <div class="contact">
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="email">Country</label>
+            <input type="email" id="email" placeholder="Enter you email....">
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+    </div>
+</div>

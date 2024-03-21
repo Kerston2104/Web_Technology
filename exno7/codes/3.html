@@ -56,6 +56,19 @@
             color: rgb(83, 132, 201);
             padding: 10px;
             border-radius: 15px;
+            border-color: skyblue;
+        }
+        #hiddencontent{
+            background-color: red;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        #close{
+            color: red;
+            border-color: red;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -67,7 +80,7 @@
                 <h1 id="blink">Blink Window</h1>
                 <label for="ddbutton">Select a background Color:
                     <select id="colorbtn">
-                        <option value="white">Select a color</option>
+                        <option value="gray">Select a color</option>
                         <option value="red">Red</option>
                         <option value="darkblue">Blue</option>
                         <option value="green">Green</option>
@@ -75,10 +88,11 @@
                 </label>
                 <button id="open">Open</button>
                 
-                <div id="hiddencontent">
-                    <p>If you click on this "Close" button, I will disappear automatically. </p>
-                    <button id="close">Close</button>
-                </div>
+            </div>
+            <div id="hiddencontent">
+                <h1 style="text-align: center;">pop up box</h1>
+                <p>give close if it works successfully. it is a popup box </p>
+                <button id="close">Close</button>
             </div>
     
         </div>
