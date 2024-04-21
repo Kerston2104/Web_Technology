@@ -16,8 +16,10 @@ db.createCollection("your_collection_name")
 ```
 To insert data into our collection use the following command:
 
+> Note: insert according to the schema created in the findcode.js file:
+
 ```sh 
-db.your_collection_name.insertOne({name:'name',regno:231})
+db.your_collection_name.insertOne({name:'name',email:'mailhere',phone:'1234567890'})
 ```
 To run the node js file open the folder in the vs code and write click on the folder named ex10 readonly:
 
