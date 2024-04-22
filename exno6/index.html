@@ -63,24 +63,25 @@
     <div id="message"></div>
 
     <div class="centerbtn">
-        <button onclick="start()">Start</button>
+        <button onclick="frame()">Start</button>
         <button onclick="stop()">Stop</button>
         <button onclick="reset()">Reset</button>
     </div>
 
     <script>
         var car = document.getElementById('car');
-        var finishLine = document.getElementById('finishLine');
         var message = document.getElementById('message');
         var pos = 0;
         var id;
 
-        function start() {
-            clearInterval(id);
-            id = setInterval(frame, 0.5);
-        }
+        // function start() {
+        //     clearInterval(id);
+        //     id = setInterval(frame, 0.5);
+        // }
 
         function frame() {
+            clearInterval(id);
+            id = setInterval(frame, 0.5);
             if (pos >= 810) {
                 clearInterval(id);
                 message.innerHTML = "Finished!";

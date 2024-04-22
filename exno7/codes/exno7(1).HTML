@@ -36,7 +36,7 @@
             margin: 10px;
         }
 
-        input[type='text']{
+        input[type='text'] {
             width: 75%;
             text-align: center;
             padding: 5px;
@@ -71,8 +71,8 @@
             <label for="interest-rate">Interest Rate % </label>
             <input type="number" id="interest-rate" placeholder="Enter your IR" required>
             <br>
-            <button type="button">Clear</button>
-            <button type="button">Calculate</button>
+            <button type="button" id="clr">Clear</button>
+            <button type="button" id="cal">Calculate</button>
             <br>
             <h3>Answer:</h3>
             <input type="text" id="result" value="Monthly Payment Value: ₹0" readonly>
@@ -80,10 +80,11 @@
     </div>
 
     <script src="/jquery-3.7.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            $('#loan-form button:nth-of-type(2)').click(function () {
+            $('#cal').click(function () {
                 const principal = parseFloat($('#loan-amount').val());
                 const tenure = parseFloat($('#loan-tenure').val());
                 const rate = parseFloat($('#interest-rate').val()) / 100;
@@ -92,7 +93,7 @@
                 $('#result').val(`Monthly Payment Value: ₹${totalEMI}`);
             });
 
-            $('#loan-form button:nth-of-type(1)').click(function () {
+            $('#clr').click(function () {
                 $('#loan-amount').val('');
                 $('#loan-tenure').val('');
                 $('#interest-rate').val('');

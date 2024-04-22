@@ -3,7 +3,6 @@
 const http = require('http');
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017/college')
-
 .then(function(){
     console.log('DB Connected')
 })

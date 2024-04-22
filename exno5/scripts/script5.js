@@ -5,7 +5,7 @@ function calculateTotalCost() {
     let subtotal = 0;
     let ogtotal = 0;
 
-    const pizzaSize = document.getElementsByName('imgbtn:checked').value;
+    const pizzaSize = document.getElementsByName('size:checked').value;
     if (pizzaSize) {
         subtotal += parseFloat(pizzaSize.value);
     }

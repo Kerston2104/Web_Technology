@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -17,20 +17,15 @@
 </body>
 <script>
     function effectFadeIn() {
-        $("# blink").fadeOut(800).fadeIn(800)
-        effectFadeOut()
-    }
-    function effectFadeOut() {
-        $("# blink").fadeIn(800).fadeOut(800)
-        effectFadeIn()
-    }
-    $(document).ready(function () {
-        effectFadeIn('box');
-    });
-    $(document).ready(function () {
-        $("# blink").fadeOut(800).fadeIn(800)
-        effectFadeOut()
-    });
+        $("#blink").fadeOut(800).fadeIn(800,effectFadeIn)}
+    effectFadeIn()
+
+    // $(document).ready(function () {
+    //     effectFadeIn('box');
+    // });
+    // $(document).ready(function () {
+    //     $("# blink").fadeOut(800).fadeIn(800,effectFadeIn)
+    // });
 </script>
 
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert data</title>
+    <script src=" https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        var app = angular.module('app', [])
+        app.controller('mycontroller', function ($scope) {
+            $scope.city = []
+            $scope.addcity = function () {
+                $scope.city.push({name:$scope.cityname})
+            };
+            $scope.removecity = function (index) {
+                $scope.city.splice(index, 1)
+            };
+        })
+    </script>
+</head>
+
+<body ng-app="app" ng-controller="mycontroller">
+    city:<input type="text" ng-model="cityname" placeholder="enter your city">
+    <button ng-click="addcity()">add</button>
+    <table border="1" cellspacing="0" width="100%">
+        <tr>
+            <th>Name</th>
+            <th>Remove</th>
+        </tr>
+        <tr ng-repeat="c in city">
+            <td>{{c.name}}</td>
+            <td>
+                <button ng-click="removecity($index)" style="color:red">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

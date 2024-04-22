@@ -4,43 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kerston's profilio</title>
+    <title>Kerston's profile</title>
     <link rel="stylesheet" href="../styles/style2.css">
     <link rel="shortcut icon" href="../asserts/Asset.png" type="image/x-icon">
-    <script src=" https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <script src="https://code.angularjs.org/1.8.2/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
     <script>
         var app = angular.module("myapp", ["ngRoute"]);
-        app.controller('myController');
+
         app.config(function ($routeProvider) {
             $routeProvider.when('/', {
-                templateUrl: 'home.html',
-                controller: 'mycontroller'
-            })
+                    templateUrl: 'home.html',
+                    controller: 'myController'
+                })
                 .when('/academic', {
                     templateUrl: 'academics.html',
-                    controller: 'mycontroller'
+                    controller: 'myController'
                 })
                 .when('/project', {
                     templateUrl: 'projects.html',
-                    controller: 'mycontroller'
+                    controller: 'myController'
                 })
                 .when('/loginsignup', {
                     templateUrl: 'loginsign.html',
-                    controller: 'mycontroller'
+                    controller: 'myController'
                 })
                 .when('/contact', {
                     templateUrl: 'contact.html',
-                    controller: 'mycontroller'
+                    controller: 'myController'
                 })
+                .otherwise({
+                    redirectTo: '/'
+                });
         });
+
     </script>
 </head>
 
-<body ng-app="myapp" ng-coontroller="mycontroller">
-    <ng-view>
-
-    </ng-view>
+<body ng-app="myapp">
+    <ng-view></ng-view>
 </body>
 
 </html>
